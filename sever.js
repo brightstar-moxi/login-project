@@ -173,8 +173,8 @@ app.post('/login', (req, res) => {
       
       }
 
-      // const token = jwt.sign({ id: user.id }, config.jwtSecret, { expiresIn: '1h' });
-      // return res.status(200).json({ token });
+       const token = jwt.sign({ id: user.id }, config.jwtSecret, { expiresIn: '1h' });
+      return res.status(200).json({ token });
       // console.log("token generated", token);
 
      
