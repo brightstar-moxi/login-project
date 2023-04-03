@@ -6,7 +6,7 @@ schema.validate(payload, {abortEarly: false});
 const signupSchema = Joi.object({
     name: Joi.string().min(6).max(30).required(),
     email: Joi.string().email().required(),
-    password: Joi.string().min(6).max(10).required(),
+    password: Joi.string().min(6).max(12).required(),
     // confirmPassword: Joi.ref("password"),
     //address:{
          // Joi.string().length(2).required(),

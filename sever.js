@@ -9,7 +9,7 @@ const app = express();
 // const bcrypt = require("bcrypt")
 // const User = require("./modal/Data")
 // const { findOne } = require("./model/user")
-
+const jwtSecret = 'secretkey'
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}))
@@ -173,9 +173,9 @@ app.post('/login', (req, res) => {
       
       }
 
-       const token = jwt.sign({ id: user.id }, config.jwtSecret, { expiresIn: '1h' });
+       const token = jwt.sign({ name: user.name, email: user.email }, jwtSecret, { expiresIn: '1h' });
       return res.status(200).json({ token });
-      // console.log("token generated", token);
+      console.log("token generated", token);
 
      
          res.status(201).json({message:"Logged in successful"});
