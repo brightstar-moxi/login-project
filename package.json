@@ -1,8 +1,8 @@
 {
   "name": "login-project",
   "version": "1.0.0",
-  "description": "login form-backend",
-  "main": "login.js",
+  "description": "data form-backend",
+  "main": "sever.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
