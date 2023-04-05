@@ -174,12 +174,9 @@ app.post('/login', (req, res) => {
       }
 
        const token = jwt.sign({ name: user.name, email: user.email }, jwtSecret, { expiresIn: '1h' });
-      return res.status(200).json({ token });
-      console.log("token generated", token);
-
-     
-         res.status(201).json({message:"Logged in successful"});
-         console.log("login successful")
+      return res.status(200).json({ token, message:"Logged in successful"});
+      //  res.status(201).json({message:"Logged in successful"});
+      
        
     })
 
